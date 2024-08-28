@@ -13,7 +13,7 @@ const RegisterForm = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
+    const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
 
     const sendMail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();

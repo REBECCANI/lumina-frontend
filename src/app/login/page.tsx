@@ -11,7 +11,7 @@ const LoginForm = () => {
 
     const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const baseurl = process.env.NEXT_PUBLIC_API_URL;
+        const baseurl = process.env.NEXT_PUBLIC_BACKEND_URL;
     
         try {
             const response = await fetch(`${baseurl}/login`, {  
