@@ -2,6 +2,7 @@ import React, { useState, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import { v4 as uuidv4 } from 'uuid';
 
+
 const RegisterForm = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -10,7 +11,7 @@ const RegisterForm = () => {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const baseUrl = 'http://localhost:5000';
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
     const sendMail = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
