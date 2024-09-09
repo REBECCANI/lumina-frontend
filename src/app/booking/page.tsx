@@ -267,7 +267,7 @@ const BookingPage = () => {
         <div className="h-full my-12 text-black">
             <div className="relative flex justify-center items-center h-full">
                 <div className="absolute inset-0 bg-cover bg-center filter blur-md" style={{ backgroundImage: `url('your-background-image.jpg')` }}></div>
-                <div className="relative flex flex-col h-auto w-full max-w-2xl p-8 bg-gray bg-opacity-60 rounded-3xl shadow-xl mt-12" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
+                <div className="relative flex flex-col h-auto w-full max-w-2xl p-8 bg-gray bg-opacity-90 rounded-3xl shadow-xl mt-12" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
                     <div className="flex flex-col items-center justify-center py-8 mt-2">
                         <h1 className="mb-2 font-bold text-2xl text-black">BOOK YOUR APPOINTMENT</h1>
                     </div>
