@@ -76,7 +76,7 @@ const RegisterForm = () => {
     return (
         <div className="h-full my-12">
             <div className="flex justify-center items-center min-h-screen">
-                <div className="flex flex-col bg-white w-11/12 sm:w-5/6 md:w-3/4 lg:w-3/4 xl:w-2/3 bg-opacity-50 rounded-3xl shadow-xl p-3 md:p-5 lg:p-6">
+                <div className="flex flex-col bg-white w-full sm:w-7/8 md:w-4/5 lg:w-3/4 xl:w-3/5 bg-opacity-50 rounded-3xl shadow-xl p-3 md:p-5 lg:p-6">
                     <div>
                         <div className="flex flex-col items-center justify-center">
                             <h1 className="text-primary font-poppins mb-4 mt-4 font-bold text-black text-2xl md:text-3xl lg:text-4xl xl:text-5xl">CONTACT US</h1>
