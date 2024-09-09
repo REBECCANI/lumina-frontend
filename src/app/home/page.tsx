@@ -3,6 +3,7 @@
 import React, { useState, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
 import { v4 as uuidv4 } from 'uuid';
+import Link from 'next/link';
 
 const RegisterForm = () => {
     const [errorMessage, setErrorMessage] = useState("");
@@ -172,9 +173,16 @@ const RegisterForm = () => {
                                     >
                                         Sign up
                                     </button>
-                                    
                                 </div>
                             </form>
+                            <div className="text-center mt-4 mb-6">
+                                <p className="text-black">
+                                    Already have an account?{' '}
+                                    <Link href="/login" className="text-blue-600 hover:underline">
+                                        Login
+                                    </Link>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
