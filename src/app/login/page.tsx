@@ -69,7 +69,7 @@ const LoginForm = () => {
                             Email
                         </label>
                         <input 
-                            className="w-full h-10 bg-white bg-opacity-20 rounded-full mb-4 px-4 text-black"
+                            className="w-full h-10 bg-gray-200 bg-opacity-90 rounded-full mb-4 px-4 text-black border border-gray-300 shadow-sm"
                             type="email"
                             onChange={(e) => setEmail(e.target.value)}
                             onClick={() => setErrorMessage('')}
@@ -81,7 +81,7 @@ const LoginForm = () => {
                             Password
                         </label>
                         <input 
-                            className="px-4 w-full h-10 mb-4 bg-white bg-opacity-20 rounded-full text-black"
+                            className="px-4 w-full h-10 mb-4 bg-gray-200 bg-opacity-90 rounded-full text-black border border-gray-300 shadow-sm"
                             type="password" 
                             onChange={(e) => setPassword(e.target.value)}
                             onClick={() => setErrorMessage('')}
