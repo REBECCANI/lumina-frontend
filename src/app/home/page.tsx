@@ -76,26 +76,26 @@ const RegisterForm = () => {
     return (
         <div className="h-full my-12">
             <div className="flex justify-center items-center h-full">
-                <div className="flex flex-col h-[80%] mt-[20px] bg-white w-full sm:w-[90%] md:w-[70%] lg:w-[60%] xl:w-[50%] 2xl:w-[40%] bg-opacity-50 rounded-3xl shadow-xl mr-[100px]">
+                <div className="flex flex-col h-auto mt-[20px] bg-white w-full sm:w-[90%] md:w-[80%] lg:w-[70%] xl:w-[60%] 2xl:w-[50%] bg-opacity-50 rounded-3xl shadow-xl px-4 py-6 md:px-8 md:py-8 lg:px-10 lg:py-10 xl:px-12 xl:py-12">
                     <div>
                         <div className="flex flex-col items-center justify-center">
-                            <h1 className="text-primary font-poppins mb-4 mt-4 font-bold text-black text-2xl max-sm:text-[1.5rem]">CONTACT US</h1>
+                            <h1 className="text-primary font-poppins mb-4 mt-4 font-bold text-black text-2xl md:text-3xl lg:text-4xl xl:text-5xl">CONTACT US</h1>
                         </div>
                         <div>
                             <form onSubmit={sendMail} encType="multipart/form-data">
-                                <div className="mx-4 sm:mx-8">
+                                <div className="mx-4 sm:mx-6 md:mx-8">
                                     <div className={`${errorMessage ? '' : 'hidden'} bg-red-100 rounded-[5px] h-fit py-4 px-4 mb-6 text-red-500`}>
                                         <span className="text-red-600 font-bold">Error: </span>
                                         {errorMessage}
                                     </div>
-                                    <div className="flex flex-col sm:flex-row gap-2">
-                                        <div className="flex flex-col">
+                                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6">
+                                        <div className="flex flex-col w-full sm:w-1/2">
                                             <label htmlFor="firstName" className="text-black font-bold mb-1">
                                                 First Name
                                             </label>
                                             <input
                                                 id="firstName"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-3 py-2 text-black"
                                                 type="text"
                                                 onChange={(e) => setFirstName(e.target.value)}
                                                 onClick={resetError}
@@ -104,13 +104,13 @@ const RegisterForm = () => {
                                                 required
                                             />
                                         </div>
-                                        <div className="flex flex-col">
+                                        <div className="flex flex-col w-full sm:w-1/2">
                                             <label htmlFor="lastName" className="text-black font-bold mb-1">
                                                 Last Name
                                             </label>
                                             <input
                                                 id="lastName"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-3 py-2 text-black"
                                                 type="text"
                                                 onChange={(e) => setLastName(e.target.value)}
                                                 onClick={resetError}
@@ -120,13 +120,13 @@ const RegisterForm = () => {
                                             />
                                         </div>
                                     </div>
-                                    <div className="flex flex-col">
-                                        <label htmlFor="email" className="text-black font-bold mt-3 mb-3">
+                                    <div className="flex flex-col mt-4">
+                                        <label htmlFor="email" className="text-black font-bold mb-1">
                                             Email
                                         </label>
                                         <input
                                             id="email"
-                                            className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
+                                            className="bg-yellow bg-opacity-20 rounded-full px-3 py-2 text-black"
                                             type="email"
                                             onChange={(e) => setEmail(e.target.value)}
                                             onClick={resetError}
@@ -135,14 +135,14 @@ const RegisterForm = () => {
                                             required
                                         />
                                     </div>
-                                    <div className="flex flex-col sm:flex-row gap-2">
-                                        <div className="flex flex-col">
-                                            <label htmlFor="password" className="text-black font-bold mb-3">
+                                    <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-4">
+                                        <div className="flex flex-col w-full sm:w-1/2">
+                                            <label htmlFor="password" className="text-black font-bold mb-1">
                                                 Password
                                             </label>
                                             <input
                                                 id="password"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-3 py-2 text-black"
                                                 type="password"
                                                 onChange={(e) => setPassword(e.target.value)}
                                                 onClick={resetError}
@@ -151,13 +151,13 @@ const RegisterForm = () => {
                                                 required
                                             />
                                         </div>
-                                        <div className="flex flex-col">
-                                            <label htmlFor="confirmPassword" className="text-black font-bold mb-3">
+                                        <div className="flex flex-col w-full sm:w-1/2">
+                                            <label htmlFor="confirmPassword" className="text-black font-bold mb-1">
                                                 Confirm Password
                                             </label>
                                             <input
                                                 id="confirmPassword"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-3 py-2 text-black"
                                                 type="password"
                                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                                 onClick={resetError}
@@ -169,14 +169,14 @@ const RegisterForm = () => {
                                     </div>
                                     <button
                                         type="submit"
-                                        className="mt-6 mb-2 bg-gradient-to-r from-yellow-500 to-yellow-500 bg-hover-brown w-[40%] sm:w-[50%] lg:w-[30%] xl:w-[25%] 2xl:w-[20%] flex mx-auto py-2 rounded-full items-center justify-center text-white text-[18px] font-semibold"
+                                        className="mt-6 mb-2 bg-gradient-to-r from-yellow-500 to-yellow-500 bg-hover-brown w-full sm:w-[80%] lg:w-[70%] xl:w-[60%] mx-auto py-2 rounded-full items-center justify-center text-white text-[16px] md:text-[18px] font-semibold"
                                     >
                                         Sign up
                                     </button>
                                 </div>
                             </form>
                             <div className="text-center mt-4 mb-6">
-                                <p className="text-black">
+                                <p className="text-black text-sm md:text-base">
                                     Already have an account?{' '}
                                     <Link href="/login" className="text-blue-600 hover:underline">
                                         Login
