@@ -2,6 +2,7 @@
 
 import React, { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const LoginForm = () => {
     const [email, setEmail] = useState("");
@@ -97,6 +98,14 @@ const LoginForm = () => {
                         </button>
                     </div>
                 </form>
+                <div className="text-center mt-4 mb-6">
+                    <p className="text-black">
+                        Already have an account?{' '}
+                        <Link href="/login" className="text-blue-600 hover:underline">
+                            Login
+                        </Link>
+                    </p>
+                </div>
             </div>
         </div>
     );

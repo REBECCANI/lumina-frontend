@@ -172,6 +172,7 @@ const RegisterForm = () => {
                                     >
                                         Sign up
                                     </button>
+                                    
                                 </div>
                             </form>
                         </div>
