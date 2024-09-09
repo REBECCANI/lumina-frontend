@@ -283,33 +283,34 @@ const BookingPage = () => {
                                 <span className="text-red-600 font-bold">Error: </span>
                                 {errorMessage}
                             </div>
-                            <div className="flex gap-2">
-                                <div className="flex flex-col">
-                                    <label htmlFor="firstName" className="text-black font-bold mb-1">First Name</label>
-                                    <input
-                                        id="firstName"
-                                        className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
-                                        type="text"
-                                        onChange={(e) => setFirstName(e.target.value)}
-                                        onClick={resetError}
-                                        value={firstName}
-                                        name="first name"
-                                        required
-                                    />
-                                </div>
-                                <div className="flex flex-col">
-                                    <label htmlFor="lastName" className="text-black font-bold mb-1">Last Name</label>
-                                    <input
-                                        id="lastName"
-                                        className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
-                                        type="text"
-                                        onChange={(e) => setLastName(e.target.value)}
-                                        onClick={resetError}
-                                        value={lastName}
-                                        name="last name"
-                                        required
-                                    />
-                                </div>
+                           
+                            <div className="flex flex-col">
+                                <label htmlFor="firstName" className="text-black font-bold mb-1">First Name</label>
+                                <input
+                                    id="firstName"
+                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    type="text"
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                    onClick={resetError}
+                                    value={firstName}
+                                    name="first name"
+                                    required
+                                />
+                            </div>
+                            <div className="flex flex-col">
+                                <label htmlFor="lastName" className="text-black font-bold mb-1">Last Name</label>
+                                <input
+                                    id="lastName"
+                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    type="text"
+                                    onChange={(e) => setLastName(e.target.value)}
+                                    onClick={resetError}
+                                    value={lastName}
+                                    name="last name"
+                                    required
+                                />
+                            </div>
+                                
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="email" className="text-black font-bold mt-3 mb-1">Email</label>
