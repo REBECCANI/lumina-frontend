@@ -213,7 +213,7 @@ const countries = [
 ];
 
 const services = [
-    'WORK',
+    'WORK VISA',
     'ACCOMMODATION',
     'STUDENT VISA'
 ];
@@ -297,8 +297,8 @@ const BookingPage = () => {
                                     required
                                 />
                             </div>
-                            <div className="flex flex-col">
-                                <label htmlFor="lastName" className="text-black font-bold mb-1">Last Name</label>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="lastName" className="text-black font-bold mt-3 mb-1">Last Name</label>
                                 <input
                                     id="lastName"
                                     className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
@@ -311,7 +311,7 @@ const BookingPage = () => {
                                 />
                             </div>
                             </div>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col mt-3">
                                 <label htmlFor="email" className="text-black font-bold mt-3 mb-1">Email</label>
                                 <input
                                     id="email"
