@@ -264,43 +264,130 @@ const BookingPage = () => {
     };
 
     return (
-        <div className="h-full my-12">
+        <div className="h-full my-12 text-black">
             <div className="relative flex justify-center items-center h-full">
-                <div className="absolute inset-0 bg-cover bg-center filter blur-md" style={{ backgroundImage: `url('bg-image.jpg')` }}></div>
-                <div className="relative flex flex-col h-auto w-full max-w-2xl p-8 bg-white bg-opacity-20 rounded-3xl shadow-xl mt-12 text-black">
+                <div className="absolute inset-0 bg-cover bg-center filter blur-md" style={{ backgroundImage: `url('your-background-image.jpg')` }}></div>
+                <div className="relative flex flex-col h-auto w-full max-w-2xl p-8 bg-white bg-opacity-20 rounded-3xl shadow-xl mt-12">
                     <div className="flex flex-col items-center justify-center py-8 mt-2">
-                        <h1 className="mb-2 font-bold text-2xl">BOOK YOUR APPOINTMENT</h1>
+                        <h1 className="mb-2 font-bold text-2xl text-black">BOOK YOUR APPOINTMENT</h1>
                     </div>
-                    <form onSubmit={sendMail} encType="multipart/form-data">
+                    <form onSubmit={sendMail} encType="multipart/form-data" className="text-black">
                         <div className="mx-8">
-                            {errorMessage && (
-                                <div className="bg-red-100 rounded h-fit py-4 px-4 mb-6 text-red-500">
-                                    <span className="font-bold">Error: </span>{errorMessage}
-                                </div>
-                            )}
+                            <div className={`${errorMessage ? '' : 'hidden'} bg-red-100 rounded h-fit py-4 px-4 mb-6 text-red-500`}>
+                                <span className="text-red-600 font-bold">Error: </span>
+                                {errorMessage}
+                            </div>
+                           
                             <div className="flex flex-col">
-                                <label htmlFor="firstName" className="font-bold mb-1">First Name</label>
+                                <label htmlFor="firstName" className="text-black font-bold mb-1">First Name</label>
                                 <input
                                     id="firstName"
                                     className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
                                     type="text"
-                                    onChange={e => setFirstName(e.target.value)}
+                                    onChange={(e) => setFirstName(e.target.value)}
+                                    onClick={resetError}
                                     value={firstName}
+                                    name="first name"
                                     required
                                 />
                             </div>
                             <div className="flex flex-col mt-3">
-                                <label htmlFor="lastName" className="font-bold mt-3 mb-1">Last Name</label>
+                                <label htmlFor="lastName" className="text-black font-bold mt-3 mb-1">Last Name</label>
                                 <input
                                     id="lastName"
                                     className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
                                     type="text"
-                                    onChange={e => setLastName(e.target.value)}
+                                    onChange={(e) => setLastName(e.target.value)}
+                                    onClick={resetError}
                                     value={lastName}
+                                    name="last name"
                                     required
                                 />
                             </div>
-                            {/* Additional form elements */}
+                            
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="email" className="text-black font-bold mt-3 mb-1">Email</label>
+                                <input
+                                    id="email"
+                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    type="email"
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    onClick={resetError}
+                                    value={email}
+                                    name="email"
+                                    required
+                                />
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="phone" className="text-black font-bold mb-1">Phone</label>
+                                <input
+                                    id="phone"
+                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    type="tel"
+                                    onChange={(e) => setPhone(e.target.value)}
+                                    onClick={resetError}
+                                    value={phone}
+                                    name="phone"
+                                    required
+                                />
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="country" className="text-black font-bold mb-1">Country</label>
+                                <select
+                                    id="country"
+                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    onChange={(e) => setCountry(e.target.value)}
+                                    value={country}
+                                    name="country"
+                                    required
+                                >
+                                    <option value="">Select a country</option>
+                                    {countries.map((country) => (
+                                        <option key={country.code} value={country.code}>
+                                            {country.name}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="service" className="text-black font-bold mb-1">Service</label>
+                                <select
+                                    id="service"
+                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    onChange={(e) => setService(e.target.value)}
+                                    value={service}
+                                    name="service"
+                                    required
+                                >
+                                    <option value="">Select a service</option>
+                                    {services.map((srv) => (
+                                        <option key={srv} value={srv}>
+                                            {srv}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            <div className="flex flex-col mt-3">
+                                <label htmlFor="description" className="text-black font-bold mb-1">Description</label>
+                                <textarea
+                                    id="description"
+                                    className="bg-yellow bg-opacity-20 rounded-md px-2 py-1"
+                                    onChange={(e) => setDescription(e.target.value)}
+                                    onClick={resetError}
+                                    value={description}
+                                    name="description"
+                                    rows={4}
+                                    required
+                                />
+                            </div>
+                            <div className='flex justify-center'>
+                                <button
+                                    type="submit"
+                                    className="mt-6 mb-2 bg-gradient-to-r from-yellow-500 to-yellow-500 bg-hover-brown w-1/2 py-2 rounded-full text-white text-18 font-semibold mx-auto"
+                                >
+                                    BOOK 
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -308,6 +395,5 @@ const BookingPage = () => {
         </div>
     );
 };
-
 
 export default BookingPage;
