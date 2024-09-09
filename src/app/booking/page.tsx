@@ -310,7 +310,6 @@ const BookingPage = () => {
                                     required
                                 />
                             </div>
-                                
                             </div>
                             <div className="flex flex-col">
                                 <label htmlFor="email" className="text-black font-bold mt-3 mb-1">Email</label>
@@ -395,7 +394,6 @@ const BookingPage = () => {
                                     BOOK 
                                 </button>
                             </div>
-                        </div>
                     </form>
                 </div>
             </div>
