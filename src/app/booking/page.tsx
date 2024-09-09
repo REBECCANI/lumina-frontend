@@ -295,7 +295,7 @@ const BookingPage = () => {
                                 <label htmlFor="lastName" className="text-black font-bold mt-3 mb-1">Last Name</label>
                                 <input
                                     id="lastName"
-                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    className="bg-gray-200 rounded-full px-4 py-2"
                                     type="text"
                                     onChange={(e) => setLastName(e.target.value)}
                                     onClick={resetError}
@@ -309,7 +309,7 @@ const BookingPage = () => {
                                 <label htmlFor="email" className="text-black font-bold mt-3 mb-1">Email</label>
                                 <input
                                     id="email"
-                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    className="bg-gray-200 rounded-full px-4 py-2"
                                     type="email"
                                     onChange={(e) => setEmail(e.target.value)}
                                     onClick={resetError}
@@ -322,7 +322,7 @@ const BookingPage = () => {
                                 <label htmlFor="phone" className="text-black font-bold mb-1">Phone</label>
                                 <input
                                     id="phone"
-                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    className="bg-gray-200 rounded-full px-4 py-2"
                                     type="tel"
                                     onChange={(e) => setPhone(e.target.value)}
                                     onClick={resetError}
@@ -335,7 +335,7 @@ const BookingPage = () => {
                                 <label htmlFor="country" className="text-black font-bold mb-1">Country</label>
                                 <select
                                     id="country"
-                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    className="bg-gray-200 rounded-full px-4 py-2"
                                     onChange={(e) => setCountry(e.target.value)}
                                     value={country}
                                     name="country"
@@ -353,7 +353,7 @@ const BookingPage = () => {
                                 <label htmlFor="service" className="text-black font-bold mb-1">Service</label>
                                 <select
                                     id="service"
-                                    className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                    className="bg-gray-200 rounded-full px-4 py-2"
                                     onChange={(e) => setService(e.target.value)}
                                     value={service}
                                     name="service"
@@ -371,7 +371,7 @@ const BookingPage = () => {
                                 <label htmlFor="description" className="text-black font-bold mb-1">Description</label>
                                 <textarea
                                     id="description"
-                                    className="bg-yellow bg-opacity-20 rounded-md px-2 py-1"
+                                    className="bg-gray-200 rounded-full px-4 py-2"
                                     onChange={(e) => setDescription(e.target.value)}
                                     onClick={resetError}
                                     value={description}
