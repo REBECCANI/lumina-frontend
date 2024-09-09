@@ -89,12 +89,12 @@ const RegisterForm = () => {
                                     </div>
                                     <div className="flex flex-col sm:flex-row gap-2">
                                         <div className="flex flex-col">
-                                            <label htmlFor="firstName" className="text-black font-bold text-black-600 mb-1">
+                                            <label htmlFor="firstName" className="text-black font-bold mb-1">
                                                 First Name
                                             </label>
                                             <input
                                                 id="firstName"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
                                                 type="text"
                                                 onChange={(e) => setFirstName(e.target.value)}
                                                 onClick={resetError}
@@ -104,12 +104,12 @@ const RegisterForm = () => {
                                             />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label htmlFor="lastName" className="text-black font-bold text-black-600 mb-1">
+                                            <label htmlFor="lastName" className="text-black font-bold mb-1">
                                                 Last Name
                                             </label>
                                             <input
                                                 id="lastName"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
                                                 type="text"
                                                 onChange={(e) => setLastName(e.target.value)}
                                                 onClick={resetError}
@@ -120,12 +120,12 @@ const RegisterForm = () => {
                                         </div>
                                     </div>
                                     <div className="flex flex-col">
-                                        <label htmlFor="email" className="text-black font-bold text-black-600 mt-3 mb-3">
+                                        <label htmlFor="email" className="text-black font-bold mt-3 mb-3">
                                             Email
                                         </label>
                                         <input
                                             id="email"
-                                            className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                            className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
                                             type="email"
                                             onChange={(e) => setEmail(e.target.value)}
                                             onClick={resetError}
@@ -136,12 +136,12 @@ const RegisterForm = () => {
                                     </div>
                                     <div className="flex flex-col sm:flex-row gap-2">
                                         <div className="flex flex-col">
-                                            <label htmlFor="password" className="text-black font-bold text-black-600 mb-3">
+                                            <label htmlFor="password" className="text-black font-bold mb-3">
                                                 Password
                                             </label>
                                             <input
                                                 id="password"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
                                                 type="password"
                                                 onChange={(e) => setPassword(e.target.value)}
                                                 onClick={resetError}
@@ -151,12 +151,12 @@ const RegisterForm = () => {
                                             />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label htmlFor="confirmPassword" className="text-black font-bold text-black-600 mb-3">
+                                            <label htmlFor="confirmPassword" className="text-black font-bold mb-3">
                                                 Confirm Password
                                             </label>
                                             <input
                                                 id="confirmPassword"
-                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1"
+                                                className="bg-yellow bg-opacity-20 rounded-full px-2 py-1 text-black"
                                                 type="password"
                                                 onChange={(e) => setConfirmPassword(e.target.value)}
                                                 onClick={resetError}

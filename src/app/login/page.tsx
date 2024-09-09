@@ -56,20 +56,20 @@ const LoginForm = () => {
 
     return (
         <div className="min-h-screen flex justify-center items-center bg-gray-100">
-            <div className="flex flex-col w-full max-w-md p-8 bg-white bg-opacity-90 rounded-3xl shadow-xl">
-                <div className="flex flex-col items-center justify-center py-8">
-                    <h1 className="text-black font-bold text-5xl">Login</h1>
+            <div className="flex flex-col w-full max-w-md p-8 bg-white bg-opacity-90 rounded-3xl shadow-xl sm:max-w-sm sm:p-6">
+                <div className="flex flex-col items-center justify-center py-8 sm:py-6">
+                    <h1 className="text-black font-bold text-5xl sm:text-4xl">Login</h1>
                 </div>
                 <form onSubmit={handleLogin}>
-                    <div className="mx-8">
+                    <div className="mx-8 sm:mx-4">
                         <div className={`${errorMessage ? '' : 'hidden'} bg-red-100 rounded h-fit py-4 px-4 mb-6 text-red-500`}>
                             <span className="text-red-600 font-bold">Error: </span>{errorMessage}
                         </div>
-                        <label htmlFor="email" className="text-black font-semibold mb-4">
+                        <label htmlFor="email" className="text-black font-semibold mb-4 text-lg sm:text-base">
                             Email
                         </label>
                         <input 
-                            className="w-full h-10 bg-white bg-opacity-20 rounded-full mb-4"
+                            className="w-full h-10 bg-white bg-opacity-20 rounded-full mb-4 px-4 text-black"
                             type="email"
                             onChange={(e) => setEmail(e.target.value)}
                             onClick={() => setErrorMessage('')}
@@ -77,11 +77,11 @@ const LoginForm = () => {
                             name="email"
                             required
                         />
-                        <label htmlFor="password" className="text-black font-semibold mb-4">
+                        <label htmlFor="password" className="text-black font-semibold mb-4 text-lg sm:text-base">
                             Password
                         </label>
                         <input 
-                            className="px-4 w-full h-10 mb-4 bg-white bg-opacity-20 rounded-full"
+                            className="px-4 w-full h-10 mb-4 bg-white bg-opacity-20 rounded-full text-black"
                             type="password" 
                             onChange={(e) => setPassword(e.target.value)}
                             onClick={() => setErrorMessage('')}
@@ -91,7 +91,7 @@ const LoginForm = () => {
                         />
                         <button
                             type="submit"
-                            className="mt-8 bg-gradient-to-r from-yellow-500 to-yellow-500 w-full py-4 rounded-full text-white text-md font-semibold"
+                            className="mt-8 bg-gradient-to-r from-yellow-500 to-yellow-500 w-full py-4 rounded-full text-white text-md font-semibold sm:py-3"
                         >
                             Login
                         </button>
